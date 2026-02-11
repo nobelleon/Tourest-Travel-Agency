@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-2v0+n+21=&1jjl^0=o*nod^a$^0+$#9@%681c&s&=i#w8^8o-_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -116,6 +116,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+
+MEDIA_URL = "images/"
+MEDIA_ROOT = BASE_DIR/'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
